@@ -28,11 +28,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Passenger as the app server
-# gem 'passenger'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger', '>=0.1.1'
+end
 
 group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
